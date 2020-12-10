@@ -1,0 +1,27 @@
+*,
+*:after,
+*:before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 100%;
+}
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: #222;
+  color: antiquewhite;
+  min-height: 100vh;
+  width: 100%;
+  display: grid;
+  place-items: center;
+}
+.app {
+    text-align: center;
+  h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+  p {
+    font-size: 1rem;
+  }
+}
