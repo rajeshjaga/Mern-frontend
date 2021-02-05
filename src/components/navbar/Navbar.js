@@ -10,11 +10,14 @@ const Navbar = () => {
                 <h3>RJ</h3>
             </div>
             <ul className="flex flex-jc-sb flex-ai-c">
-                <Link className="space-li  flex flex-ai-c" to="/">
+                <Link className="space-li  flex flex-ai-c" to="/Mern-frontend">
                     <HomeOutlined fontSize={media ? 'large' : 'default'} />
                     {!media ? 'Home' : ''}
                 </Link>
-                <Link className="space-li  flex flex-ai-c" to="/add">
+                <Link
+                    className="space-li  flex flex-ai-c"
+                    to="/Mern-frontend/add"
+                >
                     <AddAPhotoOutlined fontSize={media ? 'large' : 'default'} />
                     {!media ? 'New Post' : ''}
                 </Link>
