@@ -2,7 +2,7 @@ import React from 'react'
 import Post from './post/Post'
 import { Container, LinearProgress } from '@material-ui/core'
 import { useStyles } from './styles'
-import { useFetch, API } from '../../api'
+import { useFetch } from '../../api'
 
 const Posts = ({ setCurrentId }) => {
     const classes = useStyles({})
@@ -27,4 +27,4 @@ const Posts = ({ setCurrentId }) => {
     )
 }
 
-export default Posts
+export default React.memo(Posts)

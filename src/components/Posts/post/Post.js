@@ -1,12 +1,14 @@
 import React, { useState, useEffect } from 'react'
 import { useStyles, useMedia } from './styles'
 import { Modal } from '@material-ui/core'
+import { useHistory } from 'react-router-dom'
 
-const Posts = ({ info, setCurrentId }) => {
+const Post = ({ info, setCurrentId }) => {
     const classes = useStyles({})
     const media = useMedia()
     const [picture, setPicture] = useState(info.selectedFile)
     const [open, setOpen] = useState(false)
+    const history = useHistory()
     useEffect(() => {
         info.selectedFile
             ? picture
@@ -37,7 +39,10 @@ const Posts = ({ info, setCurrentId }) => {
                 <div>
                     <button
                         className={classes.button}
-                        onClick={() => setCurrentId(info._id)}
+                        onClick={() => {
+                            setCurrentId(info._id)
+                            history.push('/Mern-frontend/add')
+                        }}
                     >
                         Edit
                     </button>
@@ -48,4 +53,4 @@ const Posts = ({ info, setCurrentId }) => {
     )
 }
 
-export default Posts
+export default Post

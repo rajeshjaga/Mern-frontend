@@ -16,7 +16,6 @@ export const posttoapi = (data) => {
 }
 
 export function useFetch() {
-    //setting states
     const [loading, setLoading] = useState(true)
     const [data, setData] = useState([])
     const getData = () => {
@@ -36,9 +35,5 @@ export function useFetch() {
     return [data, loading]
 }
 
-export const updatePost = (id, updatePost) =>
-    axios
-        .patch(`${url}/${id}`, updatePost)
-        .then(alert('post has been updated'))
-        .catch(alert("Post couldn't update due internal error"))
-        .then(location.reload())
+//prettier-ignore
+export const updatePost = (id, updatePost) =>axios.patch(`${url}/${id}`, updatePost).then(alert('post has been updated')).catch(alert("Post couldn't update due internal error")).then(location.reload())
