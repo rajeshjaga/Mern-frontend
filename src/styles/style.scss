@@ -1,0 +1,43 @@
+@use "./helper";
+@use "./resets";
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #ffffff;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160' viewBox='0 0 200 200'%3E%3Cpolygon fill='%23DCEFFA' points='100 0 0 100 100 100 100 200 200 100 200 0'/%3E%3C/svg%3E");
+}
+.logo {
+    width: fit-content;
+    padding: 0.5rem;
+    background: black;
+    color: #fff;
+    cursor: pointer;
+}
+nav {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    padding: 1rem 5rem;
+    background: #fff;
+    filter: drop-shadow(0 5px 5px rgba(0, 0, 0, 0.2));
+}
+a:hover {
+    background: rgb(224, 224, 224);
+}
+a {
+    border-radius: 7px;
+    padding: 0.5rem 1rem;
+    font-weight: 600;
+}
+footer {
+    background: #000;
+    color: #fff;
+    padding: 1rem 2rem;
+    min-height: 30vh;
+}
+@media (max-width: 800px) {
+    .card {
+        width: 100%;
+    }
+}
